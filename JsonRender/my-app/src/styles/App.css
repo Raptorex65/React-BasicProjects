@@ -1,0 +1,28 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+div.App{
+    display: block;
+
+    }
+div.friendcards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    float: left;
+
+}
+
+div.childrencards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    float: left;
+}
