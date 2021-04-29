@@ -17,7 +17,8 @@ function Form() {
           body: await JSON.stringify({//backende gonderilecek bilgileri body ile gonderiyoruz
             firstName: event.target.firstName.value,
             lastName:event.target.lastName.value,
-            gender: event.target.gender.value,
+            genderMale: event.target.male.value,
+            genderFemale: event.target.female.value,
             birthday: event.target.birthday.value,
             email: event.target.email.value,
             password: event.target.password.value,
@@ -35,21 +36,17 @@ function Form() {
   
 return (
     <div className="rightPart">
-      <h3 className="header">FORM</h3>
         <form className="form" onSubmit={handleSubmit}>
-        <fieldset>
-            <legend>Person:</legend>
+        <fieldset className="fieldset">
+            <legend>FORM:</legend>
                 <label for="firstName"> First Name </label>
                 <input name="firstName"type="text" required></input> 
                 <br></br>
                 <label for="lastName"> Last Name </label>
                 <input name="lastName" type="text" required></input> 
                 <br></br>
-                <input type="radio" name="male" value="male"></input>
-                <label for="male"> Male </label>
-                <input type="radio" name="female" value="female"></input>
-                <label for="female"> Female </label>
-                <br></br>
+                <label for="male"> Male <input type="radio" name="male" value="male"></input></label>
+                <label for="female"> Female <input type="radio" name="female" value="female"></input></label>
                 <label for="birthday"> Birtday </label>
                 <input type="date" name="birthday"></input>
                 <br></br>

@@ -2,18 +2,21 @@ import { useEffect, useState } from "react";
 
 const GetData = () => {
   const [form, setForm] = useState([])
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    loadData()
+    const loadData= async () => {
+      const response = await fetch("http://174.138.103.233/api/employees")
+      const data= await response.json();
+      setForm(data);
+      console.log(data);
+      setIsLoading(false)
+  }
+  loadData();
   }, [])
 
-  const loadData= async () => {
-    const response = await fetch("http://174.138.103.233/api/employees")
-    const data= await response.json();
-    setForm(data);
-    console.log(data);
-}
-
+  if (isLoading){
+    return <>Loading...</>
+  }
 return (
     <div className="leftPart">
       <table striped bordered hover>
@@ -28,7 +31,7 @@ return (
             <th>About</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody data-testid='table-contents'>
           {form.map((user)=>{
             return (
                     <tr>
