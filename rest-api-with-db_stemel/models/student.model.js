@@ -3,7 +3,13 @@ const Sequelize = require('sequelize');
 
 const sequelize = require('../util/sequelize-db');
 
-const Student = sequelize.define('student', {
+const Student = sequelize.define("student", {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    allowNull: false,
+    primaryKey: true
+  },
   firstName: {
     type: Sequelize.STRING
   },

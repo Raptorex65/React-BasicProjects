@@ -3,18 +3,22 @@ const Sequelize = require('sequelize');
 
 const sequelize = require('../util/sequelize-db');
 
-const Rent = sequelize.define('rent', {
+const Rent = sequelize.define("rent", {
   startDate: {
-    type: Sequelize.DATE
+    type: Sequelize.DATE,
+    allowNull: false,
   },
   duration: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false,
   },
   price: {
-    type: Sequelize.DOUBLE
+    type: Sequelize.DOUBLE,
+    allowNull: false,
   },
   customer: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false,
   }
 });
 

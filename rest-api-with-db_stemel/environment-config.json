@@ -9,5 +9,6 @@
       "min": 0,
       "acquire": 30000,
       "idle": 10000
-    }
+    },
+    "populationTimeOutInterval": 60000
 }

@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const sequelize = require('../util/sequelize-db');
 
-const Movie = sequelize.define('movie', {
+const Movie = sequelize.define("movie", {
   name: {
     type: Sequelize.STRING
   },

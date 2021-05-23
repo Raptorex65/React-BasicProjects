@@ -1,6 +1,0 @@
-
-import MovieModel from "./models/movie.model.js.js.js.js";
-import RentModel from "./models/rent.model.js.js.js.js";
-import StudentModel from "../models/student.model.js"
-
-

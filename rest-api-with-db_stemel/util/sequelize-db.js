@@ -29,9 +29,9 @@ db.movies.hasMany(db.rents);
 
 // use it to force to create the db from scratch 
 // .sync({ force: true })
-//db.sequelize.sync().then(() => {
-//  console.log("Drop and re-sync db.");
-//});
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.");
+});
 
 
 module.exports = db;

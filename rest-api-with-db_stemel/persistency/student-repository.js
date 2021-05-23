@@ -1,4 +1,4 @@
-const db = require('../util/sequelize-db');
+const db = require('../util/sequelize-db.js');
 //Service'den gelen iş istekleri burada db üzerinde islenir ve geri gonderilir.
 //Islemler findAll, findByPk vd sequelize komutlarindan istifade edilir..
 //Bu komutlar ve daha fazlasi sequelize'in sitesinde var

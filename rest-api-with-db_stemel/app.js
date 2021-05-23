@@ -9,8 +9,6 @@ const cors = require('cors')
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json')
 
-const sequelize = require('./util/sequelize-db');
-
 // Routers
 const moviesRouter = require('./routes/movies');
 const rentsRouter = require('./routes/rents')
@@ -28,17 +26,6 @@ app.post('/students', studentsRouter)
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-sequelize
-  .sync()
-  .then(result => {
-    // console.log(result);
-    app.listen(3000);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+app.listen(3000, ()=>{
+   console.log("listening on 3000"); });
 
-//app.listen(3000, ()=>{
-//   console.log("listening on 3000"); });
-
-// nodemon --experimental-json-modules app.js

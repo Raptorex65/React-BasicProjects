@@ -1,4 +1,4 @@
-const db = require('../util/sequelize-db')
+const db = require('../util/sequelize-db.js')
 
 const getAll = async() => {
   return await db.movies.findAll();
