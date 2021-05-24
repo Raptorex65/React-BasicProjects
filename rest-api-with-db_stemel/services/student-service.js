@@ -1,4 +1,4 @@
-const studentRepository = require('..persistency/student-repository');
+const studentRepository = require('../persistency/student-repository');
 //Burasi bir order alani gibi dusunulebilir
 //Buradaki is istekleri repository'ye gonderilerek db uzerinden islem yapiliyor
 //Repodan islenerek hazir edilen veri router'a(routes) geri gonderiliyor
